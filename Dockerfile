@@ -1,9 +1,7 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-COPY src/Main.java .
+COPY target/*.jar app.jar
 
-RUN javac Main.java
-
-CMD ["java", "Main"]
+CMD ["java","-jar","app.jar"]
