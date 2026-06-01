@@ -23,6 +23,7 @@
     </dependencies>
 
     <build>
+
         <plugins>
 
             <plugin>
@@ -31,7 +32,23 @@
                 <version>3.1.2</version>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.demo.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+
+            </plugin>
+
         </plugins>
+
     </build>
 
 </project>
