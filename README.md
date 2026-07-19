@@ -1,4 +1,4 @@
-# Dockefilr Explanation
+# Dockefile Explanation
 ---
 ```bash
 FROM tomcat:10.1-jdk21
