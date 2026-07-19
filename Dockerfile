@@ -1,9 +1,9 @@
-FROM eclipse-temurin:21-jre
+FROM tomcat:10.1-jdk21
 
-WORKDIR /app
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY target/*.jar app.jar
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
-EXPOSE 8081
+EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+CMD ["catalina.sh", "run"]
