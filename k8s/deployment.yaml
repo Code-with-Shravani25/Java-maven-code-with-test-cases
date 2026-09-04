@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: java-app
+          image: java-app:latest
           imagePullPolicy: Never
 
           ports:
